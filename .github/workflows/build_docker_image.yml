@@ -1,0 +1,19 @@
+---
+name: Авто-сборка Docker-образа
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Получение исходников
+        uses: actions/checkout@v2
+
+      - name: Сборка Docker-образа
+        run: docker build ./auto-server-project -t my-nginx-app:latest
+...
