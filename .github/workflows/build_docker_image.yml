@@ -15,5 +15,5 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Сборка Docker-образа
-        run: docker build . -t my-nginx-app:latest
+        run: docker build ./auto-server-project -t my-nginx-app:latest
 ...
